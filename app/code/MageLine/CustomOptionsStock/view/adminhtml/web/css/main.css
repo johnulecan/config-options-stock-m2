@@ -1,0 +1,15 @@
+/**
+ * @author MageLine Team
+ * @copyright Copyright (c) 2018 MageLine (https://www.mageline.com)
+ * @package MageLine_CustomOptionsStock
+ */
+
+.config-nav-block.mageline-extensions-tab strong:before {
+    background: url(../images/logo-mageline-icon.png) no-repeat;
+    width: 30px;
+    height: 29px;
+    content: '';
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: bottom;
+}

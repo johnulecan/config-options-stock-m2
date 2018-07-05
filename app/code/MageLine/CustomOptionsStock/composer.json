@@ -1,0 +1,21 @@
+{
+  "name": "mageline/module-customoptionsstock",
+  "description": "Products Custom Options Stock Management",
+  "require": {
+    "php": "~5.6.0|~7.0.0",
+    "magento/framework": "100.1.*"
+  },
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "MageLine\\CustomOptionsStock\\": ""
+    }
+  }
+}

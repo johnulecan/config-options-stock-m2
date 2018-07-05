@@ -1,0 +1,27 @@
+<?php if($block->getIsEnabled()): ?>
+	<?php $optionsStock = $block->getProductOptionsStock(); ?>
+	<?php if($optionsStock->getSize()): ?>
+		<?php $optionsStock = json_encode($optionsStock->getData()); ?>
+		<script type="text/javascript">
+	        require(['jquery','mage/template','jquery/ui','mage/translate'],
+	            function($, mageTemplate) {
+	                $(document).ready( function(){
+	                    if($(".product-custom-option").length > 0) {
+                            $(".product-custom-option").each(function () {
+                                var product_option = $(this).val();
+                                var product_option_element = this;
+                                $.each(JSON.parse('<?php /* escapeNotVerified */ echo $optionsStock; ?>'), function () {
+                                    if (product_option == this.option_id) {
+                                        var label = $('label[for="'+$(product_option_element).attr('id')+'"] span');
+                                        $(label).css("color", "grey").css("text-decoration","line-through").after(' - <span class="custom-options-out-of-stock">OUT OF STOCK</span>');
+                                        $(product_option_element).prop("disabled", true);
+                                    }
+                                });
+                            });
+                        }
+	                });
+	            }
+	        );
+		</script>
+		<?php endif; ?>
+<?php endif; ?>

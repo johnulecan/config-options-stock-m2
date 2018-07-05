@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mageline" translate="label" sortOrder="10" class="mageline-extensions-tab">
+            <label>MageLine Extensions</label>
+        </tab>
+        <section id="magelineCustomOptionsStockSection" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Products Custom Options Stock Management Setup</label>
+            <tab>mageline</tab>
+            <resource>MageLine_CustomOptionsStock::customoptionsstock_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Products Custom Options Stock Manaegment</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        <![CDATA[
+                                    <span class="notice">Enable Products Custom Options Stock Manaegment</span>]]>
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

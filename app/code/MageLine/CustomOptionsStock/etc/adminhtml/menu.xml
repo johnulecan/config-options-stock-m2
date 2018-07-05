@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MageLine_CustomOptionsStock::title" title="Products Custom Options Stock" translate="title" module="MageLine_CustomOptionsStock" sortOrder="100" parent="Magento_Catalog::catalog" resource="Magento_Catalog::catalog_products"/>
+        <add id="MageLine_CustomOptionsStock::options" title="Manage Products Custom Options Stock" translate="title" module="MageLine_CustomOptionsStock" sortOrder="200" parent="MageLine_CustomOptionsStock::title" action="mglcustomoptionsstock/options" resource="Magento_Catalog::catalog_products" />
+        <add id="MageLine_CustomOptionsStock::config" title="Configuration" translate="title" module="MageLine_CustomOptionsStock" sortOrder="201" parent="MageLine_CustomOptionsStock::title" action="adminhtml/system_config/edit/section/magelineCustomOptionsStockSection" resource="MageLine_CustomOptionsStock::general" />
+    </menu>
+</config>
